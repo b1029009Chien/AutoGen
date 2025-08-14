@@ -1,4 +1,23 @@
-Result:
+## Installation
+### 環境：
+**Ubuntu 24.02 (VMWare Workstation Pro)** 
+**Python 3.12.3**
+
+```
+pip install autogen-agentchat autogen-ext
+```
+### Quickstart：
+```
+git clone https://github.com/b1029009Chien/AutoGen.git
+
+#go into virtual enviroment
+source /home/chien/AutoGen/Emily/bin/activate
+
+python3 [your_want_to_exec_file].py
+```
+## Rusult
+v1:
+
     === Step 1: Understanding Course Content ===
     <think>
     好，我现在要帮用户把 transcript 和课程大纲整合成一个理解二三数插入节点的内容。首先，我得仔细阅读用户提供的 transcript，了解每个部分讲了什么。
