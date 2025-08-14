@@ -38,7 +38,6 @@ async def main():
     Chapter 18 B-Trees
     """
 
-    # Step 1: Class Content Summary
     step1_prompt = f"""
     Please integrate the following transcript and the course outline and write a complete and concise understanding of the course content in English:
     transcript:
@@ -46,28 +45,30 @@ async def main():
     course outline：
     {course_outline}
     """
+    # ...existing code...
+    # Step 1: Class Content Summary
     step1_result = await summarizer.run(task=step1_prompt)
     print("\n=== Step 1: Understanding Course Content ===")
-    step1_text = "\n".join([m.content for m in step1_result.messages])
+    step1_text = step1_result.messages[-1].content
     print(step1_text)
 
     # Step 2: get keywords
     step2_prompt = f"""
-    Please select 5-15 keywords from the following:
+    Please select 5-15 keywords in English from the following:
     {step1_text}
     """
     step2_result = await keypoint_extractor.run(task=step2_prompt)
-    step2_text = "\n".join([m.content for m in step2_result.messages])
+    step2_text = step2_result.messages[-1].content
     print("\n=== Step 2: Key Points ===")
     print(step2_text)
 
     # Step 3: Generated Questions
     step3_prompt = f"""
-    Generate insightful and thought-provoking course questions based on the following keywords:
+    Generate 1-5 questions in English based on the following keywords:
     {step2_text}
     """
     step3_result = await question_generator.run(task=step3_prompt)
-    step3_text = "\n".join([m.content for m in step3_result.messages])
+    step3_text = step3_result.messages[-1].content
     print("\n=== Step 3: Generated Questions ===")
     print(step3_text)
 
