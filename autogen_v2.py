@@ -8,7 +8,7 @@ from autogen_agentchat.ui import Console
 async def main():
     # 建立 Ollama client
     ollama_client = OllamaChatCompletionClient(
-        model="deepseek-r1:1.5b",
+        model="llama3.1:8b",
         base_url="http://localhost:11434",
         temperature=0.2
     )

@@ -15,7 +15,64 @@ source /home/chien/AutoGen/Emily/bin/activate
 
 python3 [your_want_to_exec_file].py
 ```
-## Rusult [v1](#v1) [v2](#v2)
+## Rusult [ollamam3.1:8b](#ollama318b-v2)[deepseek-r1:1.5b-v1](#v1) [deepseek-r1:1.5b-v2](#v2)
+### ollama3.1:8b-v2:
+    ---------- TextMessage (class_assistant) ----------
+    Here's my plan for creating the summary and questions:
+
+    **Step 1: Summarizer**
+
+    I will summarize the provided transcript, focusing on the key points of inserting a new node into a B-Tree. I will highlight the different cases, such as inserting a new node into an empty tree, a two-node (2-tree), or a three-node (3-tree).
+
+    **Step 2: Summarizer**
+
+    I will generate a concise summary of the transcript in English:
+
+    "When inserting a new node into a B-Tree, there are several cases to consider. If the tree is empty, the new node becomes the root. If the tree has two nodes (a 2-tree), the new node can be inserted as a leaf node or as an internal node. If the tree has three nodes (a 3-tree), the new node must be inserted as an internal node and may require rebalancing of the tree to maintain the B-Tree properties.
+
+    In general, when inserting a new node into a B-Tree, we need to consider the following steps:
+
+    * Determine the correct position for the new node based on its key value.
+    * Insert the new node into the tree, potentially requiring rebalancing of the tree.
+    * Ensure that the tree remains balanced and satisfies the B-Tree properties.
+
+    The process of inserting a new node into a B-Tree can be complex, especially when dealing with multiple nodes and branches. However, by following these steps and considering the different cases, we can ensure that the tree remains balanced and efficient."
+
+    **Step 3: Question Generator**
+
+    I will generate questions based on the summary, focusing on key concepts such as:
+
+    * Inserting a new node into an empty B-Tree
+    * Inserting a new node into a 2-tree or 3-tree
+    * Rebalancing the tree to maintain B-Tree properties
+    * Determining the correct position for a new node in a B-Tree
+
+    Here are some sample questions:
+
+    1. What happens when inserting a new node into an empty B-Tree?
+    a) The new node becomes a leaf node.
+    b) The new node becomes an internal node.
+    c) The new node becomes the root of the tree.
+
+    Answer: c) The new node becomes the root of the tree.
+
+    2. When inserting a new node into a 3-tree, what must be done to maintain B-Tree properties?
+    a) Rebalance the tree by moving nodes up or down.
+    b) Insert the new node as an internal node without rebalancing.
+    c) Ignore the new node and continue with the existing tree.
+
+    Answer: a) Rebalance the tree by moving nodes up or down.
+
+    3. What is the primary goal when inserting a new node into a B-Tree?
+    a) To minimize the number of nodes in the tree.
+    b) To maximize the number of branches in the tree.
+    c) To maintain balance and satisfy B-Tree properties.
+
+    Answer: c) To maintain balance and satisfy B-Tree properties.
+
+    I will continue to generate questions based on the summary, focusing on key concepts and scenarios.
+
+## deepseek-r1:1.5b
 ### v1:
 
     === Step 1: Understanding Course Content ===
