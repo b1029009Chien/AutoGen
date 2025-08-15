@@ -1,4 +1,5 @@
 import asyncio
+from ollama_utils import ollama_client
 from autogen_agentchat.agents import AssistantAgent
 from autogen_agentchat.conditions import TextMentionTermination
 from autogen_agentchat.teams import SelectorGroupChat
@@ -6,14 +7,6 @@ from autogen_ext.models.ollama import OllamaChatCompletionClient
 from autogen_agentchat.ui import Console
 
 async def main():
-    # 建立 Ollama client
-    ollama_client = OllamaChatCompletionClient(
-        model="llama3.1:8b",
-        base_url="http://localhost:11434",
-        temperature=0.2
-    )
-
-    # 三個 Agent
     class_assistant = AssistantAgent(
         name="class_assistant",
         model_client=ollama_client,
@@ -25,7 +18,7 @@ async def main():
 
         Always submit your plan first, then hand it off to the appropriate agent. 
         You may hand off to only one agent at a time. 
-        Use TERMINATE once the summary and questions are complete.
+        Use TERMINATE once the summarizer and question_generator return back.
         """
     )
     
@@ -42,7 +35,8 @@ async def main():
     question_generator = AssistantAgent(
         name = "question_generator",
         model_client = ollama_client,
-        system_message = """You are a question generation expert skilled at 
+        system_message = """
+        You are a question generation expert skilled at 
         creating targeted course questions based on self-organized notes and 
         distilled key points.Once the questions are complete, it must be handed 
         back to the class_assistant Coordinator."""
