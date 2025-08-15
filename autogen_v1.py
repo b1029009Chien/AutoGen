@@ -1,16 +1,8 @@
 import asyncio
+from ollama_utils import ollama_client
 from autogen_agentchat.agents import AssistantAgent
-from autogen_ext.models.ollama import OllamaChatCompletionClient
 
 async def main():
-    # 建立 Ollama client
-    ollama_client = OllamaChatCompletionClient(
-        model="deepseek-r1:1.5b",
-        base_url="http://localhost:11434",
-        temperature=0.2
-    )
-
-    # 三個 Agent
     summarizer = AssistantAgent(
         name="summarizer",
         model_client=ollama_client,

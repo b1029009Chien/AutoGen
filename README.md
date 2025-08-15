@@ -3,9 +3,6 @@
 **Ubuntu 24.02 (VMWare Workstation Pro)** 
 **Python 3.12.3**
 
-```
-pip install autogen-agentchat autogen-ext
-```
 ## Quickstart：
 ```
 git clone https://github.com/b1029009Chien/AutoGen.git
@@ -13,6 +10,10 @@ git clone https://github.com/b1029009Chien/AutoGen.git
 #go into virtual enviroment
 source /home/chien/AutoGen/Emily/bin/activate
 
+#change your import ollama url in ollama_util
+os.environ["OLLAMA_HOST"] = "<your url>"
+
+#execute the file
 python3 [your_want_to_exec_file].py
 ```
 ## Rusult [ollamam3.1:8b](#ollama318b-v2)[deepseek-r1:1.5b-v1](#v1) [deepseek-r1:1.5b-v2](#v2)

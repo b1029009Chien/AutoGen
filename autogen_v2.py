@@ -3,7 +3,6 @@ from ollama_utils import ollama_client
 from autogen_agentchat.agents import AssistantAgent
 from autogen_agentchat.conditions import TextMentionTermination
 from autogen_agentchat.teams import SelectorGroupChat
-from autogen_ext.models.ollama import OllamaChatCompletionClient
 from autogen_agentchat.ui import Console
 
 async def main():
