@@ -2,7 +2,7 @@ import os
 from autogen_ext.models.ollama import OllamaChatCompletionClient
 
 # Configure Ollama server address
-os.environ["OLLAMA_HOST"] = "http://hc4.isl.lab.nycu.edu.tw:11434"
+os.environ["OLLAMA_HOST"] = "<your url>"
 
 # Create client (change model name if needed)
 ollama_client = OllamaChatCompletionClient(
